@@ -1,5 +1,0 @@
-[15-Jan-2019 13:31:54 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function DateTime() in D:\xampp\htdocs\schildfolio\bord\Registration.php:5
-Stack trace:
-#0 D:\xampp\htdocs\schildfolio\bord\singup.php(2): include()
-#1 {main}
-  thrown in D:\xampp\htdocs\schildfolio\bord\Registration.php on line 5
