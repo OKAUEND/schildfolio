@@ -39,6 +39,7 @@
                                 if(!empty($_POST['email'])) echo $_POST['email'];
                             ?>>
                         <p class ="description">パスワード再発行などに使用されます。</p>
+                        <?php if(!empty($err_msg['email'])) echo $err_msg['email']; ?>
                     </div>
                     <div class="input_area">
                         <label>Password<span class = "required">*</span></label>
@@ -47,6 +48,7 @@
                                 if(!empty($_POST['password'])) echo $_POST['password'];
                             ?>>
                         <p class ="description">8文字以上で半角英数文字を使用してください。</p>
+                        <?php if(!empty($err_msg['password'])) echo $err_msg['password']; ?>
                     </div>
                     <div class="input_area">
                         <input type="submit" class="btn no-singup" value="登録">
