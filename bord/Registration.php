@@ -1,9 +1,9 @@
 <?php
+
+    require('function.php');
+
     if(!empty($_POST))
     {
-
-        //IsVaildSymbol($_POST['username'],"");
-
         IsVaildHalfString($_POST['password'],'password');
 
         foreach($_POST as $key => $value)
