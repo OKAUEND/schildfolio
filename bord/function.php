@@ -17,9 +17,23 @@ function debug($str)
     global $debug_flg;
     if(!empty($debug_flg))
     {
-        error_log('デバッグ',$str);
+        error_log('デバッグ:'.$str);
     }
 }
+
+//================================
+// セッション準備・セッション有効期限を延ばす
+//================================
+//セッションファイルの置き場を変更する（/var/tmp/以下に置くと30日は削除されない）
+session_save_path("/xampp/var/tmp");
+//ガーベージコレクションが削除するセッションの有効期限を設定（30日以上経っているものに対してだけ１００分の１の確率で削除）
+ini_set('session.gc_maxlifetime',60*60*24*30);
+//ブラウザを閉じても削除されないようにクッキー自体の有効期限を延ばす
+ini_set('session.cookie_lifetime ',60*60*24*30);
+//セッションを使う
+session_start();
+//現在のセッションIDを新しく生成したものと置き換える（なりすましのセキュリティ対策）
+session_regenerate_id();
 
 //---------------------------------------------
 // 画面表示処理開始ログ吐き出し関数
@@ -35,6 +49,7 @@ function debuglogstart()
         debug('ログイン期限日時タイムスタンプ:'.($_SESSION['login_date'] + $_SESSION['login_limit']));
     }
 }
+
 //---------------------------------------------
 // 定数：注意/警告メッセージ
 //---------------------------------------------
@@ -142,7 +157,7 @@ function IsEmailDup($value,$key)
         $dbh = DBConnect(); 
         //クエリ文を生成
         $sql = 'SELECT count(*) as Email FROM users WHERE email = :email';
-        $sql_date = array(':email' => $email);
+        $sql_date = array(':email' => $value);
 
          //クエリを発行&取得
         $stmt = queryPost($dbh,$sql,$sql_date);
@@ -150,7 +165,7 @@ function IsEmailDup($value,$key)
 
         //結果判定
         //値があれば重複していると判定
-        if(!empty(arrya_shift($result)))
+        if(!empty($result['Email']))
         {
             $err_msg[$key] = MSG_EMAIL_DUP;
         }
