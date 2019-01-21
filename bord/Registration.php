@@ -76,10 +76,31 @@
                         );
             
             //クエリ文発行
-            queryPost($dbh,$sql,$date);
+            $stmt = queryPost($dbh,$sql,$date);
 
-            //マイページへ遷移する
-            header("Location:mypage.html");
+            //クエリ発行が成功/否
+            if($stmt)
+            {
+                //セッションのデフォルト有効期限を一時間とする
+                $session_time = 60*60;
+
+                //セッション期限を設定する
+                $_SESSION['login_limit'] = $session_time;
+                //最終ログインを現在日時に設定する
+                $_SESSION['login_date'] = time();
+                //ユーザーIDを設定する
+                $_SESSION['user_id'] = $dbh->lastInsertId();
+
+                debug('セッション変数の中身:'.print_r($_SESSION,true));
+
+                //マイページへ遷移する
+                header("Location:mypage.php");
+            }
+            else
+            {
+                error_log('エラー発生', $e->getMessage());
+                $err_msg['common'] = 'SQLエラー発生';
+            }
         }
         catch(Exception $e)
         {

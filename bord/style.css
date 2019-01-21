@@ -18,7 +18,7 @@ h1,h2,h3,h4,p
 {
     width:100%;
     height:60px;
-    background:rgb(44, 44, 44);
+    background:#7ed3b2;
     overflow: hidden;
 }
 
@@ -138,3 +138,139 @@ input[type="submit"] .no-singup
 {
     border-bottom:1px solid #444; 
 }
+
+#main_content
+{
+    overflow: hidden;
+    width:1280px;
+    margin:0 auto;
+}
+
+.article-sidebar
+{
+    width:30%;
+    height:100%;
+    min-height:700px;
+    float:left;
+}
+
+.article-sidebar__list
+{
+    margin:0 auto;
+    margin-bottom: 10px;
+    width:70%;
+    text-align: center;
+    background:#b9e6d3;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.article-sidebar__list:first-child
+{
+    margin-top:50px;
+}
+
+.article-sidebar__img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+}
+
+.article-sidebar__item
+{
+    margin:10px;
+    border-bottom: 1px dotted #222;
+    padding-bottom: 10px;
+}
+
+.article-sidebar__item:last-child
+{
+    border:none;
+    padding-bottom: 0px;
+}
+
+.article-sidebar__txt
+{
+    border:none;
+}
+
+.article-main
+{
+    width:70%;
+    height:100%;
+    float: left;
+}
+
+.article-main__list
+{
+    margin:0 auto;
+    margin-bottom: 10px;
+    width:80%;
+    padding:10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.article-main__list.show-warning
+{
+    background:#ffcaca;
+}
+
+.article-main__list.show-Notice
+{
+    background:#ffe5be;
+}
+
+.article-main__list.show-todaybuy
+{
+    background:#bee7ff;
+}
+
+.article-main__list:first-child
+{
+    margin-top:150px;
+}
+
+.article-main__container
+{
+    margin:0 auto;
+    width:90%;
+    border-collapse: collapse;
+    overflow: hidden;
+    background:#fafbfc67;
+    margin-bottom:5px;
+    border-radius: 10px;
+}
+
+.article-main__item
+{
+    float: left;
+    margin:5px;
+}
+
+.article-main__item p
+{
+    text-align: right;
+    line-height: 50px;
+}
+
+
+.article-main__item.icon_img
+{
+    width:50px;
+    height: 50px;
+}
+
+.article-main__item.name_txt,.limit_txt
+{
+    width:150px;
+    height: 50px;
+}
+
+.article-main__item.value_txt
+{
+    width:100px;
+    height: 50px;
+}
+

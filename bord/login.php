@@ -1,5 +1,8 @@
 <?php
-    include("singin_sc.php");
+    //ログイン認証を行う
+    require('auth.php');
+    //ログイン処理を行う
+    include("login_script.php");
 ?>
 <!DOCTYPE html>
 <html>

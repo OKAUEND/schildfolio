@@ -7,8 +7,6 @@ debug("|  ログインページ :ログイン処理");
 debug("|=================================================");
 debuglogstart();
 
-require('auth.php');
-
 if(!empty($_POST))
 {
     debug("入力値有り->POST送信");
