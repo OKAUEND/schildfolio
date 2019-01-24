@@ -1,0 +1,13 @@
+
+.article-profile__item
+{
+    width:80%;
+    background:#ffffff;
+}
+
+.article-profile__item:first-child
+{
+    margin-top:100px;
+    padding:15px;
+    border-radius:10px 10px 0 0;
+}

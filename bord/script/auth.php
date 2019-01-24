@@ -22,8 +22,12 @@ if(!empty($_SESSION['login_date']))
         //セッション日時を更新する
         $_SESSION['login_date'] = time();
 
-        debug('マイページへ遷移します');
-        header("Location:mypage.html");
+        //現在ページを確認し、ログインページ以外なら遷移処理を行わない
+        if(basename($_SERVER['PHP_SELF']) === 'login.php')
+        {
+            debug('マイページへ遷移します');
+            header("Location:mypage.html");
+        }
     }
 }
 else
