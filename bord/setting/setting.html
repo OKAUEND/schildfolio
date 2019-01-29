@@ -2,26 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type= "text/css" href="style.css">
-        <link rel="stylesheet" type= "text/css" href="mypage_style.css">
+        <link rel="stylesheet" type= "text/css" href="../style.css">
+        <link rel="stylesheet" type= "text/css" href="../mypage/mypage_style.css">
         <link rel="stylesheet" type= "text/css" href="setting_style.css">
         <title>マイページ</title>
     </head>
     <body>
         <header class="header">
-            <div class="header_wrap">
-                <div class="login">
-                    <a href="" class ='Home'>家計簿をつける</a> 
-                    <a href="logout.php" class =''>ログアウト</a>
-                    <a href="#" class =''>マイページ</a>
+            <article class="header_wrap">
+                <div class="header__indexlist">
+                    <div class="header__indexitem --pickup">
+                        <a href="" class ='item-none'>家計簿をつける</a> 
+                    </div>
+                    <div class="header__indexitem">
+                        <a href="../script/logout.php" class ='item-none'>ログアウト</a>
+                    </div>
+                    <div class="header__indexitem">
+                        <a href="#" class ='item-none'>プロフィール編集</a>
+                    </div>
                 </div>
-            </div>
+            </article>
         </header>
         <section id = "main_content">
             <article class="article-sidebar">
                 <div class="article-sidebar__list">
                     <div class="article-sidebar__item">
-                        <img src="img/users_img/temple.png" alt="テスト" class="article-sidebar__img">
+                        <img src="../img/users_img/temple.png" alt="テスト" class="article-sidebar__img">
                     </div>
                 </div>
             </article>

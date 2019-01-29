@@ -2,25 +2,60 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type= "text/css" href="style.css">
+        <link rel="stylesheet" type= "text/css" href="../style.css">
+        <link rel="stylesheet" type= "text/css" href="../header_style.css">
         <link rel="stylesheet" type= "text/css" href="mypage_style.css">
         <title>マイページ</title>
     </head>
     <body>
         <header class="header">
-            <div class="header_wrap">
-                <div class="login">
-                    <a href="" class ='Home'>家計簿をつける</a> 
-                    <a href="logout.php" class =''>ログアウト</a>
-                    <a href="#" class =''>プロフィールを編集</a>
-                </div>
-            </div>
+            <nav class="header_wrap">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <span class="icon icon-home"></span>
+                            <span class="nav-text">ホーム</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <span class="icon icon-graf"></span>
+                            <span class="nav-text">記録</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../warning.html" class="nav-link">
+                            <span class="icon icon-warning"></span>
+                            <span class="nav-text">通知</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-extras">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link --redline">
+                            <span class="icon icon-record"></span>
+                            <span class="nav-text">つける</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../setting/setting.html" class="nav-link">
+                            <span class="icon icon-setting"></span>
+                            <span class="nav-text ">設定</span>
+                        </a>
+                    </li>
+                    <li class="nav-item --logout">
+                        <a href="../script/logout.php" class="nav-link ">
+                            <span class="icon icon-logout"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <section id = "main_content">
             <article class="article-sidebar">
                 <div class="article-sidebar__list">
                     <div class="article-sidebar__item">
-                        <img src="img/users_img/temple.png" alt="テスト" class="article-sidebar__img">
+                        <img src="../img/users_img/temple.png" alt="テスト" class="article-sidebar__img">
                         <a href="" class="article-sidebar__link"><img src="img/icons/gia.png" alt="" class="article-sidebar__img"></a>
                     </div>
                     <div class="article-sidebar__item">
@@ -42,7 +77,7 @@
                     <h3 class="artcle-main__txt">消費期限が切れた食材達</h3>
                     <div class="article-main__container">
                         <div class="article-main__item icon_img">
-                            <img src="img/food_icon/chicken.png" alt="">
+                            <img src="../img/food_icon/chicken.png" alt="">
                         </div>
                         <div class="article-main__item name_txt">
                             <p>鶏肉</p>
