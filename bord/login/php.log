@@ -1,0 +1,309 @@
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP Warning:  include(function.php): failed to open stream: No such file or directory in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP Warning:  include(): Failed opening 'function.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:11:04 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:セッションID:u7tuvti7kk4kmt2el3lioclnkg
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551831064
+[06-Mar-2019 09:11:04 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 09:11:16 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP Warning:  require(function.php): failed to open stream: No such file or directory in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP Fatal error:  require(): Failed opening required 'function.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:11:16 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP Warning:  include(function.php): failed to open stream: No such file or directory in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP Warning:  include(): Failed opening 'function.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:11:23 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:セッションID:vv0ip8dbgq1i3iujpbldeng1bh
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551831083
+[06-Mar-2019 09:11:23 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 09:11:46 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:11:46 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:11:46 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:11:46 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:11:46 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:15:11 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:15:11 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:15:11 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:15:11 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:15:11 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:15:40 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:15:40 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:15:40 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:15:40 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:15:40 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:16:11 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:16:11 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:16:11 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:16:11 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:16:11 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:17:13 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:17:13 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:17:13 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:17:13 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:17:13 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:17:36 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:17:36 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP Warning:  include(function.php): failed to open stream: No such file or directory in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP Warning:  include(): Failed opening 'function.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:18:11 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:6
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:セッションID:7sut3p14t98aqfastpe1863mi1
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551831491
+[06-Mar-2019 09:18:11 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP Warning:  include(function.php): failed to open stream: No such file or directory in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:7
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP Warning:  include(): Failed opening 'function.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\schildfolio\bord\login\login_script.php on line 3
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:18:42 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:7
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:セッションID:eulc85hhdib5ljbr6mfa3dqp0j
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551831522
+[06-Mar-2019 09:18:42 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 09:18:57 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:18:57 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:18:57 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:18:57 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:16 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:16 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:16 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:16 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:43 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:43 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:43 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:43 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:44 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:44 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:44 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:44 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:45 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:46 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP Fatal error:  Cannot redeclare debug() (previously declared in D:\xampp\htdocs\schildfolio\bord\script\function.php:15) in D:\xampp\htdocs\schildfolio\bord\script\function.php on line 22
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP Stack trace:
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\login\login.php:0
+[06-Mar-2019 09:19:47 Asia/Tokyo] PHP   2. include() D:\xampp\htdocs\schildfolio\bord\login\login.php:5
+[06-Mar-2019 09:21:18 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:セッションID:q63qoun1l2pi5isb3q6kjbuiks
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551831697
+[06-Mar-2019 09:21:37 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:セッションID:hl9r2pnkus5ogopl4gi049ucnh
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551831702
+[06-Mar-2019 09:21:42 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:セッションID:rpc39flh0vppq0h03equulko8e
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551836666
+[06-Mar-2019 10:44:26 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:セッションID:38u88n75bvovibtd7rj8irbndd
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551836877
+[06-Mar-2019 10:47:57 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:セッションID:p2hu9g583bieg3sk8modfljege
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551843665
+[06-Mar-2019 12:41:05 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:セッションID:rf3vo5hfev0conn8f2lrdva161
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551843683
+[06-Mar-2019 12:41:23 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:セッションID:qrktaskvr860ofphv8jtn9sm0q
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551843700
+[06-Mar-2019 12:41:40 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:セッションID:cd06cvvcu34ajdjp9i8gofk729
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551843707
+[06-Mar-2019 12:41:47 Asia/Tokyo] デバッグ:入力値有り->POST送信
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:セッションID:lbnv01kj9prje9jecemhk7cl0u
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551843723
+[06-Mar-2019 12:42:03 Asia/Tokyo] デバッグ:入力値有り->POST送信
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:セッションID:3rc8uvatmahclk0e1rd115qahj
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551844557
+[06-Mar-2019 12:55:57 Asia/Tokyo] デバッグ:入力値有り->POST送信
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:未ログインユーザーです
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:|  ログインページ :ログイン処理
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:|=================================================
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:------------------------>画面表示処理開始
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:セッションID:1jnr7j6mbkfspm8o55c6ob6akq
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:セッション変数:Array
+(
+)
+
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:現在日時タイムスタンプ:1551859235
+[06-Mar-2019 17:00:35 Asia/Tokyo] デバッグ:<----------------------------------------画面表示終了

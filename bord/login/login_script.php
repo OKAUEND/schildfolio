@@ -1,7 +1,5 @@
 <?php
 
-include("function.php");
-
 debug("|=================================================");
 debug("|  ログインページ :ログイン処理");
 debug("|=================================================");
@@ -29,10 +27,10 @@ if(!empty($_POST))
     //IsMinStrLen($password,$password_key);
 
     //Email形式チェック
-    IsVaildEmail($email,$email_key);
+    VaildEmail($email,$email_key);
 
     //英数文字チェック
-    IsVaildHalfString($password,$password_key);
+    VaildHalfString($password,$password_key);
 
     if(!empty($err_msg))
     {

@@ -95,3 +95,13 @@ input[type="submit"] .no-singup
     background:rgb(155, 155, 155);
     color:#c7c7c7;
 } 
+
+.email-success
+{
+    color:rgb(42, 233, 115);
+}
+
+.email-error
+{
+    color:rgb(212, 78, 78);
+}

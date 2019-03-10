@@ -85,7 +85,7 @@ function IsNullRequired($value,$key)
 //---------------------------------------------
 //半角英数字チェック
 //---------------------------------------------
-function IsVaildHalfString($value,$key)
+function VaildHalfString($value,$key)
 {
     var_dump($value);
     //if(!preg_match("/\A\w+\z/",$value))
@@ -100,7 +100,7 @@ function IsVaildHalfString($value,$key)
 //---------------------------------------------
 //半角記号チェック
 //---------------------------------------------
-function IsVaildSymbol($value,$key)
+function VaildSymbol($value,$key)
 {
     if(!preg_match("/^[ -]+$/",$value))
     {
@@ -111,14 +111,15 @@ function IsVaildSymbol($value,$key)
 //---------------------------------------------
 //Emailか文字列チェック
 //---------------------------------------------
-function IsVaildEmail($value,$key)
+function VaildEmail($value)
 {
+    $result = false;
     //if(!preg_match("/\A\w+@\d+\.\d+\z/",$value))
-    if(!(bool)filter_var($value,FILTER_VALIDATE_EMAIL))
+    if((bool)filter_var($value,FILTER_VALIDATE_EMAIL))
     {
-        global $err_msg;
-        $err_msg[$key] = MSG_EMAIL_ERROR; 
+        $result = true;
     }
+    return  $result;
 }
 
 //---------------------------------------------

@@ -73,12 +73,15 @@ ul>li>a
     color:#ff3737;
 }
 
-.--logout
+.--login
 {
     width:50px;
 }
 
-
+.--logout
+{
+    width:50px;
+}
 
 .icon
 {
@@ -117,4 +120,9 @@ ul>li>a
 .icon-logout::before
 {
     content: url("img/icons/logout.png");
+}
+
+.icon-login::before
+{
+    content: url("img/icons/login.png");
 }

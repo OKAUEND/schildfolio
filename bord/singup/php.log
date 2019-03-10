@@ -1,0 +1,72 @@
+[08-Mar-2019 21:35:16 Asia/Tokyo] デバッグ:Ajax
+[08-Mar-2019 21:35:19 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function IsVaildHalfString() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:11
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 11
+[08-Mar-2019 21:35:19 Asia/Tokyo] PHP Stack trace:
+[08-Mar-2019 21:35:19 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:0
+[08-Mar-2019 21:37:32 Asia/Tokyo] デバッグ:Ajax
+[09-Mar-2019 14:17:08 Asia/Tokyo] PHP Notice:  Undefined index: email in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 11
+[09-Mar-2019 14:17:08 Asia/Tokyo] PHP Stack trace:
+[09-Mar-2019 14:17:08 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:0
+[09-Mar-2019 14:17:08 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function empry() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:13
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 13
+[09-Mar-2019 14:18:05 Asia/Tokyo] PHP Notice:  Undefined index: email in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 11
+[09-Mar-2019 14:18:05 Asia/Tokyo] PHP Stack trace:
+[09-Mar-2019 14:18:05 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:0
+[09-Mar-2019 14:18:42 Asia/Tokyo] PHP Notice:  Undefined index: email in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 11
+[09-Mar-2019 14:18:42 Asia/Tokyo] PHP Stack trace:
+[09-Mar-2019 14:18:42 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:0
+[09-Mar-2019 14:18:42 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function empry() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:13
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 13
+[09-Mar-2019 14:18:58 Asia/Tokyo] PHP Notice:  Undefined index: email in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 11
+[09-Mar-2019 14:18:58 Asia/Tokyo] PHP Stack trace:
+[09-Mar-2019 14:18:58 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:0
+[09-Mar-2019 14:18:58 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function empry() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:13
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 13
+[09-Mar-2019 14:28:39 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function empry() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:13
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 13
+[09-Mar-2019 14:28:39 Asia/Tokyo] PHP Stack trace:
+[09-Mar-2019 14:28:39 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:0
+[09-Mar-2019 17:43:33 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:43:44 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:44:10 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:44:21 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:44:59 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:45:02 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:45:14 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:46:18 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function arrya() in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:12
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php on line 12
+[09-Mar-2019 17:46:18 Asia/Tokyo] PHP Stack trace:
+[09-Mar-2019 17:46:18 Asia/Tokyo] PHP   1. {main}() D:\xampp\htdocs\schildfolio\bord\singup\singupAjax.php:0

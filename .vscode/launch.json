@@ -4,6 +4,7 @@
     // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Listen for XDebug",
             "type": "php",
@@ -17,6 +18,19 @@
             "program": "${file}",
             "cwd": "${fileDirname}",
             "port": 9000
-        }
+        },
+        {
+            "name": "Launch localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost/",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch index.html",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}"
+        },
     ]
 }
