@@ -1,16 +1,18 @@
 window.addEventListener('load',function(){
 
+    let thread_ids = 0;
     let botton = document.querySelector("#btnsubmit");
-    //データベースへ登録する
+    //データベースへ登録する 書き込みをする
     botton.addEventListener('click',function(){
-        let comment_txt = document.querySelector(".comment").textContent;
+        console.log('クリック');
+        let comment_txt = document.querySelector(".comment").value;
+        
         let wait = false;
         if(comment_txt.length > 0 && !wait)
         {
-            let username = document.querySelector('.username');
-            let email = document.querySelector('.email');
-            let deletepass = document.querySelector('.deletepass');
-
+            let username = document.querySelector(".username").value;
+            let email = document.querySelector(".email").value;
+            let deletepass = document.querySelector(".deletepass").value;
             let req = new XMLHttpRequest();
             req.onreadystatechange = function()
             {
@@ -29,13 +31,13 @@ window.addEventListener('load',function(){
             req.send(
                 'name='         + encodeURIComponent(username)      + '&' +
                 'email='        + encodeURIComponent(email)         + '&' +
-                'deletepass'    + encodeURIComponent(deletepass)    + '&' +
-                'comment_txt'   + encodeURIComponent(comment_txt)
+                'deletepass='   + encodeURIComponent(deletepass)    + '&' +
+                'comment='  + encodeURIComponent(comment_txt)
                 );
         }
         else
         {
-            console.log('通信中です')
+            console.log('処理してないよ。こっちきたよ')
         }
     },false);
 },false);
