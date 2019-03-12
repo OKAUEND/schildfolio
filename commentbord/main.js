@@ -1,6 +1,7 @@
 window.addEventListener('load',function(){
 
-    let thread_ids = 0;
+    let thred_id = 0;
+    let res_no = 0;
     let botton = document.querySelector("#btnsubmit");
     //データベースへ登録する 書き込みをする
     botton.addEventListener('click',function(){
@@ -26,13 +27,15 @@ window.addEventListener('load',function(){
                     console.log('通信待機中');
                 }
             }
-            req.open('POST','commentAjax.php',true);
+            req.open('POST','writingAjax.php',true);
             req.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8');
             req.send(
                 'name='         + encodeURIComponent(username)      + '&' +
                 'email='        + encodeURIComponent(email)         + '&' +
-                'deletepass='   + encodeURIComponent(deletepass)    + '&' +
-                'comment='  + encodeURIComponent(comment_txt)
+                'delete_pass='  + encodeURIComponent(deletepass)    + '&' +
+                'comment='      + encodeURIComponent(comment_txt)   + '&' +
+                'thred_id='      + encodeURIComponent(thred_id)     + '&' +
+                'res_no ='      + encodeURIComponent(res_no)
                 );
         }
         else
