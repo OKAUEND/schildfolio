@@ -1,6 +1,6 @@
 window.addEventListener('load',function(){
 
-    let thred_id = 0;
+    let thread_id = 0;
     let res_no = 0;
     let botton = document.querySelector("#btnsubmit");
     //データベースへ登録する 書き込みをする
@@ -20,6 +20,9 @@ window.addEventListener('load',function(){
                 if(req.readyState == 4 && req.status == 200)
                 {
                     wait = false
+                    let data = req.responseText;
+                    let view_item = JSON.parse(data);
+                    console.log(view_item); 
                 }
                 else
                 {
@@ -34,8 +37,8 @@ window.addEventListener('load',function(){
                 'email='        + encodeURIComponent(email)         + '&' +
                 'delete_pass='  + encodeURIComponent(deletepass)    + '&' +
                 'comment='      + encodeURIComponent(comment_txt)   + '&' +
-                'thred_id='      + encodeURIComponent(thred_id)     + '&' +
-                'res_no ='      + encodeURIComponent(res_no)
+                'thread_id='    + encodeURIComponent(thread_id)      + '&' +
+                'res_no='       + encodeURIComponent(res_no),
                 );
         }
         else

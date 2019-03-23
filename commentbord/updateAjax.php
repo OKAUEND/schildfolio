@@ -6,7 +6,7 @@ if(!empty($_POST))
 {
 
     $res_no         = $_POST['res_no'];
-    $thred_id       = $_POST['thred_id'];
+    $thread_id       = $_POST['thread_id'];
     
     try
     {
@@ -23,11 +23,11 @@ if(!empty($_POST))
 
         $dbh = new PDO($dsn,$user,$password,$option);
 
-        $sql = ('SELECT * FROM comment WHERE thred_id = :thred_id AND res_no > :res_no');
+        $sql = ('SELECT * FROM comment WHERE thread_id = :thread_id AND res_no > :res_no');
 
         $data = array(
-            ':thred_id' => $thred_id,
-            ':res_no'   => $res_no
+            ':thread_id'     => $thread_id,
+            ':res_no'        => $res_no
         );
 
         $stmt = $dbh->prepare($sql);

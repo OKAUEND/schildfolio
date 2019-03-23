@@ -59,20 +59,35 @@ if(!empty($_POST))
         //データベースへの更新ができなかった時はjsにフラグを返して処理を終了
         if(!$stmt)
         {
-            echo $stmt;
-            exit;
+            echo 'error';
+            die();
         }
-
-
     }
     catch(Exception $ex)
     {
-       echo $ex; 
-       exit;
+       echo 'error' .$ex->getMessage(); 
+       die();
     }
 
-    
+    //表示用にDBからレスを取得する
+    try
+    {
+        //SQL文を作成
+        $sql = "SELECT * FROM comment";
 
+        $db = new DBconnect();
+
+        $stmt = $db->select($sql);
+
+        $result = $stmt->fetchAll();
+        
+        echo json_encode($result);
+    }
+    catch(Exception $ex)
+    {
+        echo 'error' .$ex->getMessage(); 
+        die();
+    }
 }
 
 class DBconnect{
@@ -102,6 +117,13 @@ class DBconnect{
             die();
         }
         return $pdo;
+    }
+
+    function select($sql)
+    {
+        $tmp = $this->pdo();
+        $stmt = $tmp->query($sql);
+        return $stmt;
     }
 
     //SQL文を発行する時に使用する関数
