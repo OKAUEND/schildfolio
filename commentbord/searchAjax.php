@@ -11,7 +11,7 @@ if(empty($_POST))
 }
 
 $thread_id = $_POST['thread_id'];
-$response_no = $_POST['data'];
+$response_no = explode(',',$_POST['data']);
 
 try
 {
@@ -24,29 +24,34 @@ try
 
     $count = 1;
 
-    $data = arrya();
+    $data = array();
 
     foreach($response_no as $value)
     {
-        if($where.len > 0)
+        if(!empty($where))
         {
-            $where =  $where.'AND ';
+            $where =  $where.' OR ';
         }
 
-        $where = $where.'ID = :ID'.$count;
+        $tmp = 'ID = :ID'.$count;
 
         $data += array(
             ':ID'.$count => $value
         );
-        $count + 1;
+        $count += 1;
+
+        $where = $where.$tmp;
     }
 
     $sql = 'SELECT '.$select.' FROM '.$from.' WHERE '.$where;
 
-    $result = $pdo->plural($sql,$data);
+    $stmt = $pdo->plural($sql,$data);
     
+    $result = $stmt->fetchAll();
+
+    echo json_encode($result);
 }
 catch(Exception $e)
 {
-
+    
 }
