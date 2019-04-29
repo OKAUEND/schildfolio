@@ -4,7 +4,7 @@ require('DBconnect.php');
 
 header('Content-Type: application/json; charset=UTF-8');
 
-const UNKNOWN_USERNAME = 'ななし';
+const UNKNOWN_USERNAME = 'としあき';
 
 const WEEK = array("日","月","火","水","木","金","土");
 
@@ -43,6 +43,7 @@ if(!empty($_POST))
 
         $list = $stmt->fetchAll();
 
+        
         foreach($list as $key => $value)
         {
             //投稿者名を作成する
@@ -64,6 +65,16 @@ if(!empty($_POST))
             //1900年1月1日(月)00:00:00の形式に変換
             $day = new DateTime($value['create_data']);
             $list[$key]['create_data'] = $day->format('Y年m月d日(').WEEK[$day->format('w')].$day->format(')H:i:s');
+
+            //削除フラグをboolean型に変換する
+            if($value['delete_flg'])
+            {
+                $list[$key]['delete_flg'] = true;
+            }
+            else
+            {
+                $list[$key]['delete_flg'] = false;
+            }
         }
         unset($value);
         
