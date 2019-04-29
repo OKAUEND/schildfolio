@@ -2,7 +2,7 @@
 
 require('DBconnect.php');
 
-header('Content-type : application/json;charset=UTF-8');
+header('Content-Type: application/json; charset=UTF-8');
 
 if(empty($_POST))
 {
@@ -26,22 +26,26 @@ try
 
     $data = array();
 
+    $in = '';
+
     foreach($response_no as $value)
     {
-        if(!empty($where))
+        if(!empty($in))
         {
-            $where =  $where.' OR ';
+            $in =  $in.',';
         }
 
-        $tmp = 'ID = :ID'.$count;
+        $in = $in.':ID'.$count;
 
         $data += array(
             ':ID'.$count => $value
         );
         $count += 1;
-
-        $where = $where.$tmp;
     }
+
+    $in = 'ID IN ( '.$in.' )';
+
+    $where = $in.' AND delete_flg = false';
 
     $sql = 'SELECT '.$select.' FROM '.$from.' WHERE '.$where;
 
@@ -53,5 +57,7 @@ try
 }
 catch(Exception $e)
 {
-    
+    //サーバーエラーとしてフロントにエラー情報を返す
+    header("HTTP/1.1 500 Internal Server Error");
+    die();
 }
