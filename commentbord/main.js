@@ -8,7 +8,7 @@ window.addEventListener('load',function(){
     //初回読み込み
     fetchCommentdata(thread_data).then((data) =>
     {
-        createCommentDOM(data);
+        createCommentDOM(data,thread_data);
         thread_data.threadinfo = data;
     });
 
@@ -37,7 +37,7 @@ window.addEventListener('load',function(){
         insertInputData(input_list).then((result) =>
         {
             console.log('登録完了');
-            return fetchCommentdata(thread_data);
+            return fetchCommentdata(result,thread_data);
         })
         .then((result) => 
         {
@@ -89,27 +89,40 @@ window.addEventListener('load',function(){
         //     return false;
         // }
 
-        console.log(document.comment_area);
+        let response_id_list = []; 
+
+        //チェックした返信レスのIDをピックアップする
         for(let count = 0; count < document.comment_area.delete_check.length ; count++)
         {
             if(document.comment_area.delete_check[count].checked)
             {
-                console.log('チェック');
+                response_id_list.push(document.comment_area.delete_check[count].value);
             }
         }
 
-        // searchRecode(thread_data).then((result) =>
-        // {
+        searchRecode(thread_data,response_id_list).then((result) =>
+        {
 
-        // })
-        // .then((result) =>
-        // {
+            let isIncludes  = result.every((value) =>
+            {
+                return (response_id_list.includes(value['ID']))
+            })
 
-        // })
-        // .catch((err) =>
-        // {
-
-        // })
+            //該当しないレコードを含む場合
+            if(isIncludes)
+            {
+                //削除処理を行う
+                deleteRecode(thread_data.threadinfo,response_id_list);
+            }
+        })
+        .then((result) =>
+        {
+            let isIncludes;
+        })
+        .catch((err) =>
+        {
+            console.log('サバエラー');
+        })
 
     },false);
 
@@ -127,25 +140,16 @@ function fetchCommentdata(thread_data)
         let Threadinfo = thread_data.threadinfo;
 
         xhr.send(
-            'page_type='           + encodeURIComponent(Threadinfo['page_type'])   + '&' +
+            'page_type='         + encodeURIComponent(Threadinfo['page_type'])   + '&' +
             'thread_id='         + encodeURIComponent(Threadinfo['thread_id'])   + '&' +
-            'last_res_no='       + encodeURIComponent(Threadinfo['last_res_no']) + '&' +  
-            'last_res_time='     + encodeURIComponent(Threadinfo['last_res_time']) 
+            'last_res_no='       + encodeURIComponent(Threadinfo['last_database_id']) + '&' +  
+            'last_res_time='     + encodeURIComponent(Threadinfo['last_update_time']) 
         );
 
         xhr.onreadystatechange = function()
         {
             switch(xhr.readyState)
             {
-                case 1:
-                    break;
-                
-                case 2:
-                    break;
-    
-                case 3:
-                    break;
-                
                 case 4:
                     if(xhr.status == 200)
                     {
@@ -169,7 +173,7 @@ function insertInputData($array)
     {
         let req = new XMLHttpRequest();
         req.open('POST','insertAjax.php',true);
-        req.setRequestHeader('content-type','application/json;charset=UTF-8');
+        req.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8');
         req.send(
             'name='         + encodeURIComponent($array['username'])      + '&' +
             'email='        + encodeURIComponent($array['email'])         + '&' +
@@ -182,15 +186,6 @@ function insertInputData($array)
         {
             switch(req.readyState)
             {
-                case 1:
-                    break;
-                
-                case 2:
-                    break;
-    
-                case 3:
-                    break;
-                
                 case 4:
                     if(req.status == 200)
                     {
@@ -203,35 +198,23 @@ function insertInputData($array)
     })
 }
 
-function deleteRecode($array)
+function deleteRecode(thread_data,data)
 {
     return new Promise((resolve,reject) =>
     {
         let xhr = new XMLHttpRequest();
         xhr.open('POST','deleteAjax.php',true);
         xhr.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8');
-        //現在のスレッド情報を取得する
-        let Threadinfo = thread_data.createInfo();
-    
+
         xhr.send(
-            'thread_id='         + encodeURIComponent(Threadinfo['thread_id'])   + '&' +
-            'last_res_no='       + encodeURIComponent(Threadinfo['last_res_no']) + '&' +  
-            'last_res_time='     + encodeURIComponent(Threadinfo['last_res_time']) 
+            'thread_id=' + encodeURIComponent(thread_data['thread_id']) + '&' + 
+            'data='      + encodeURIComponent(data)
         );
     
         xhr.onreadystatechange = function()
         {
             switch(xhr.readyState)
             {
-                case 1:
-                    break;
-                
-                case 2:
-                    break;
-    
-                case 3:
-                    break;
-                
                 case 4:
                     if(xhr.status == 200)
                     {
@@ -250,14 +233,30 @@ function searchRecode(thread_data,data)
     {
         let xhr = new XMLHttpRequest();
         xhr.open('POST','searchAjax.php',true);
-        xhr.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8')
+        xhr.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8');
         xhr.send(
-            'thread_id=' + encodeURIComponent() + '&' + 
-            'data=' + data);
+            'thread_id=' + encodeURIComponent(thread_data.threadinfo['thread_id']) + '&' + 
+            'data='      + encodeURIComponent(data)
+        );
+    
+        xhr.onreadystatechange = function()
+        {
+            switch(xhr.readyState)
+            {
+                case 4:
+                    if(xhr.status == 200)
+                    {
+                        let data = JSON.parse(xhr.responseText);
+
+                        resolve(data);
+                    }
+                    break;
+            }
+        }
     })
 }
 
-function createCommentDOM(array)
+function createCommentDOM(fetchdata,thread_data)
 {
    let comment_area = document.querySelector('#main-content');
    let fragment = document.createDocumentFragment();  
@@ -265,9 +264,17 @@ function createCommentDOM(array)
    $form.classList.add('main-content__form');
    $form.setAttribute("name",'comment_area');
 
+   let response_No = thread_data.responseNo;
 
    //取得した配列をループで回し、DOMを作成し表示する
-   array.forEach(element => {
+   fetchdata.forEach(element => {
+
+        response_No += 1;
+
+        if(element['delete_flg'])
+        {
+            return;
+        }
 
         //レスのbody部分を作成する
         let $div = document.createElement('div');
@@ -305,6 +312,8 @@ function createCommentDOM(array)
         fragment.appendChild($div);
    });
 
+   thread_data.responseNo = response_No;
+
    $form.appendChild(fragment);
    comment_area.appendChild($form);
 }
@@ -315,23 +324,25 @@ class thread
     _page_type;
     _thread_id;
     _response_list;
+    _last_database_id;
+    _last_update_time;
     _last_res_no;
-    _last_res_time;
 
     constructor()
     {
         this._page_type = 'thread'; 
         this._thread_id = 0;
         this._response_list = [];
+        this._last_database_id = 0;
+        this._last_update_time = null;
         this._last_res_no = 0;
-        this._last_res_time = null;
     }
 
     set threadinfo(array)
     {
         let data = array[array.length - 1]
-        this._last_res_no = Number(data['ID']);
-        this._last_res_time = data['create_data'];
+        this._last_database_id = Number(data['ID']);
+        this._last_update_time = data['create_data'];
     }
 
     get threadinfo()
@@ -339,9 +350,18 @@ class thread
         let result = [];
         result['page_type']     = this._page_type;
         result['thread_id']     = this._thread_id;
-        result['last_res_no']   = this._last_res_no;
-        result['last_res_time'] = this._last_res_time;
+        result['last_database_id']  = this._last_database_id;
+        result['last_update_time'] = this._last_update_time;
         return result;
+    }
+
+    set responseNo(res_no)
+    {
+        this._last_res_no = res_no;
+    }
+    get responseNo()
+    {
+        return this._last_res_no;
     }
 }
 
