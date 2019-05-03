@@ -51,7 +51,7 @@ try
 
     $stmt = $pdo->plural($sql,$data);
 
-    echo json_encode($result);
+    echo json_encode(true);
 }
 catch(PDOException $e)
 {
