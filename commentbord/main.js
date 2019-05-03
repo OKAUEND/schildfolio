@@ -12,8 +12,6 @@ window.addEventListener('load',function(){
         thread_data.threadinfo = data;
     });
 
-    console.log('先にこっち');
-
     //データベースへ登録する 書き込みをする
     submit.addEventListener('click',function(){
         console.log('クリック');
@@ -22,7 +20,6 @@ window.addEventListener('load',function(){
         var wait = false;
         if(comment.length == 0 && wait)
         {
-            console.log('こっちきたよ')
             return false;
         }
 
@@ -36,14 +33,13 @@ window.addEventListener('load',function(){
 
         insertInputData(input_list).then((result) =>
         {
-            console.log('登録完了');
             return fetchCommentdata(result,thread_data);
         })
         .then((result) => 
         {
             if(result.length > 0)
             {
-                createCommentDOM(result);
+                createCommentDOM(result,thread_data);
             }
             wait = false;
         })
@@ -65,9 +61,9 @@ window.addEventListener('load',function(){
         }
 
         wait = true;
-        fetchCommentdata(thread_data).then((data) =>
+        fetchCommentdata(thread_data).then((result) =>
         {
-            showComment(data);
+            createCommentDOM(result,thread_data);
             thread_data.threadinfo = data;
             wait = false;
         })
@@ -84,9 +80,10 @@ window.addEventListener('load',function(){
         let delete_text = document.querySelector('.delete_pas').value;
 
         //削除パスワードを入力されていないときは処理を終了する
+        //製作中はコメント化をして判定を省く
         // if(delete_text.length == 0)
         // {
-        //     return false;
+        //     return;
         // }
 
         let response_id_list = []; 
@@ -100,15 +97,17 @@ window.addEventListener('load',function(){
             }
         }
 
+        //該当レスIDがデータベースに存在するかを検索する
         searchRecode(thread_data,response_id_list).then((result) =>
         {
 
+            //サーバーから取得したIDが、ピックアップしたレスのIDと合致しているか
             let isIncludes  = result.every((value) =>
             {
                 return (response_id_list.includes(value['ID']))
             })
 
-            //該当しないレコードを含む場合
+            //選んでいたレスがすべてサーバーに存在する場合、削除処理を実施
             if(isIncludes)
             {
                 //削除処理を行う
@@ -158,7 +157,7 @@ function fetchCommentdata(thread_data)
                     }
                     else if(xhr.status == 500)
                     {
-                        console.log("ステータス500")
+                        reject('500')
                     }
                     break;
             }
@@ -198,7 +197,7 @@ function insertInputData($array)
     })
 }
 
-function deleteRecode(thread_data,data)
+function deleteRecode(threadinfo,data)
 {
     return new Promise((resolve,reject) =>
     {
@@ -207,7 +206,7 @@ function deleteRecode(thread_data,data)
         xhr.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8');
 
         xhr.send(
-            'thread_id=' + encodeURIComponent(thread_data['thread_id']) + '&' + 
+            'thread_id=' + encodeURIComponent(threadinfo['thread_id']) + '&' + 
             'data='      + encodeURIComponent(data)
         );
     
