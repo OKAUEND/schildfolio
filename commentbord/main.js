@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
     //データベースへ登録する 書き込みをする
     submit.addEventListener('click',function(){
         console.log('クリック');
-        let comment = document.querySelector(".comment").value;
+        let comment = document.querySelector(".main-form_textarea").value;
 
         var wait = false;
         if(comment.length == 0 && wait)
@@ -277,7 +277,7 @@ function createCommentDOM(fetchdata,thread_data)
 
         //レスのbody部分を作成する
         let $div = document.createElement('div');
-        $div.classList.add('main-content__body',element['ID']);
+        $div.classList.add('main-content__item',element['ID']);
 
         //削除指定用のチェックボックスを作成
         let $input = document.createElement('input');
