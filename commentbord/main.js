@@ -47,10 +47,7 @@ window.addEventListener('load',function(){
                 wait = false;
                 return;
             }
-            console.log("追加後更新");
-            let tmp = createDOMFragment(result,thread_data);
-            console.log(tmp);
-            appendDOMFragment(tmp,thread_data);
+            appendDOMFragment(createDOMFragment(result,thread_data),thread_data);
             wait = false;
         })
         .catch((err) =>
@@ -274,7 +271,7 @@ function searchRecode(thread_data,data)
 function newCommentDOM(DOMFragment)
 {
    let $section = document.createElement('section');
-   $section.classList.add('main-content__list');
+   $section.classList.add('main__body');
 
    let comment_area = document.querySelector('#main-content');
    $section.appendChild(DOMFragment);
@@ -283,7 +280,7 @@ function newCommentDOM(DOMFragment)
 
 function appendDOMFragment(DOMFragment)
 {
-    let comment_area = document.querySelector('.main-content__list');
+    let comment_area = document.querySelector('.main__body');
     comment_area.appendChild(DOMFragment);
 }
 
@@ -305,7 +302,7 @@ function createDOMFragment(fetchdata,thread_data)
         //レスのbody部分を作成する
         let $div = document.createElement('div');
         $div.classList.add('main-content__item',element['ID']);
-        
+
         //投稿者名を作成
         let $span_username   = document.createElement('span');
         $span_username.appendChild(document.createTextNode(element['username']));
@@ -322,7 +319,7 @@ function createDOMFragment(fetchdata,thread_data)
         $p_comment.classList.add('main-content__text');
 
         //作成したDOMをbodyタグに挿入
-        $div.appendChild($input);
+
         $div.appendChild($span_username);
         $div.appendChild($span_writingtime);
         $div.appendChild($p_comment);
