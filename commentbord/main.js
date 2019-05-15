@@ -8,7 +8,9 @@ window.addEventListener('load',function(){
     //初回読み込み
     fetchCommentdata(thread_data).then((data) =>
     {
-        createCommentDOM(data,thread_data);
+        let tmp = createDOMFragment(data,thread_data);
+        console.log(tmp);
+        newCommentDOM(tmp,thread_data);
         thread_data.threadinfo = data;
     });
 
@@ -29,18 +31,23 @@ window.addEventListener('load',function(){
         input_list['email'] = document.querySelector(".email").value;
         input_list['deletepass'] = document.querySelector(".deletepass").value;
         input_list['comment'] = comment;
-        input_list.push(thread_data.threadinfo);
 
-        insertInputData(input_list).then((result) =>
+        let tmp = thread_data.threadinfo;
+
+        let list = Object.assign(input_list,tmp);
+
+        insertInputData(input_list).then(() =>
         {
-            return fetchCommentdata(result,thread_data);
+            return fetchCommentdata(thread_data);
         })
         .then((result) => 
         {
-            if(result.length > 0)
+            if(result.length < 0)
             {
-                createCommentDOM(result,thread_data);
+                wait = false;
+                return;
             }
+            appendDOMFragment(createDOMFragment(result,thread_data),thread_data);
             wait = false;
         })
         .catch((err) =>
@@ -63,7 +70,12 @@ window.addEventListener('load',function(){
         wait = true;
         fetchCommentdata(thread_data).then((result) =>
         {
-            createCommentDOM(result,thread_data);
+            if(result.length = 0)
+            {
+                wait = false;
+                return;
+            }
+            appendDOMFragment(createDOMFragment(result,thread_data),thread_data);
             thread_data.threadinfo = data;
             wait = false;
         })
@@ -179,8 +191,9 @@ function insertInputData($array)
             'delete_pass='  + encodeURIComponent($array['deletepass'])    + '&' +
             'comment='      + encodeURIComponent($array['comment'])       + '&' +
             'thread_id='    + encodeURIComponent($array['thread_id'])     + '&' +
-            'res_no='       + encodeURIComponent($array['last_res_no']),
+            'last_database_id='+ encodeURIComponent($array['last_database_id']),
             );
+
         req.onreadystatechange = function()
         {
             switch(req.readyState)
@@ -255,18 +268,29 @@ function searchRecode(thread_data,data)
     })
 }
 
-function createCommentDOM(fetchdata,thread_data)
+function newCommentDOM(DOMFragment)
 {
-   let comment_area = document.querySelector('#main-content');
-   let fragment = document.createDocumentFragment();  
-   let $form = document.createElement('form');
-   $form.classList.add('main-content__form');
-   $form.setAttribute("name",'comment_area');
+   let $section = document.createElement('section');
+   $section.classList.add('main__body');
 
-   let response_No = thread_data.responseNo;
+   let comment_area = document.querySelector('#main-content');
+   $section.appendChild(DOMFragment);
+   comment_area.appendChild($section);
+}
+
+function appendDOMFragment(DOMFragment)
+{
+    let comment_area = document.querySelector('.main__body');
+    comment_area.appendChild(DOMFragment);
+}
+
+function createDOMFragment(fetchdata,thread_data)
+{
+    let fragment = document.createDocumentFragment();  
+    let response_No = thread_data.responseNo;
 
    //取得した配列をループで回し、DOMを作成し表示する
-   fetchdata.forEach(element => {
+    fetchdata.forEach(element => {
 
         response_No += 1;
 
@@ -277,20 +301,13 @@ function createCommentDOM(fetchdata,thread_data)
 
         //レスのbody部分を作成する
         let $div = document.createElement('div');
-        $div.classList.add('main-content__body',element['ID']);
-
-        //削除指定用のチェックボックスを作成
-        let $input = document.createElement('input');
-        $input.setAttribute("type","checkbox");
-        $input.setAttribute("name",'delete_check');
-        $input.setAttribute("value",element['ID']);
-        $input.classList.add('main-content__checkbox');
+        $div.classList.add('main-content__item',element['ID']);
 
         //投稿者名を作成
         let $span_username   = document.createElement('span');
         $span_username.appendChild(document.createTextNode(element['username']));
         $span_username.classList.add('main-content__name');
-        
+
         //投稿時間を作成
         let $span_writingtime = document.createElement('span');
         $span_writingtime.appendChild(document.createTextNode(element['create_data']));
@@ -302,19 +319,20 @@ function createCommentDOM(fetchdata,thread_data)
         $p_comment.classList.add('main-content__text');
 
         //作成したDOMをbodyタグに挿入
-        $div.appendChild($input);
+
         $div.appendChild($span_username);
         $div.appendChild($span_writingtime);
         $div.appendChild($p_comment);
 
         //仮想ツリーにbodyを挿入
         fragment.appendChild($div);
-   });
+    });
 
-   thread_data.responseNo = response_No;
+    thread_data.responseNo = response_No;
 
-   $form.appendChild(fragment);
-   comment_area.appendChild($form);
+    console.log(fragment);
+
+    return fragment;
 }
 
 //スレッドデータ管理クラス

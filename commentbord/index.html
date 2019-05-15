@@ -3,26 +3,37 @@
     <head>
         <meta charset="utf8">
         <title>Comment Bord</title>
-        <!--<link rel="stylesheet" href="style.css">-->
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <section id = "main">
             <article id = "main-form">
-                <label class="label-title">投稿者</label>
-                <input type="text" class="username">
-                <label class="label-title">Email</label>
-                <input type="text" class="email">
-                <label class="label-title"></label>
-                <input type="password" class="deletepass">
-                <input type="text" class="comment">
-                <input type="button" id="btnsubmit" value="返信">
+                <section class="main__body">
+                    <div class="main-form_item">
+                        <label class="main-form_text">投稿者</label>
+                        <input type="text" class="main-form_input username" placeholder="投稿者名">
+                    </div>
+                    <div class="main-form_item">
+                        <label class="main-form_text">Email</label>
+                        <input type="text" class="main-form_input email" placeholder="E-Mail">
+                    </div>
+                    <div class="main-form_item">
+                        <label class="main-form_text">削除キー</label>
+                        <input type="password" class="main-form_input deletepass" placeholder="削除キー">
+                    </div>
+                    <div class="main-form_item">
+                        <label class="main-form_text">コメント</label>
+                        <textarea type="text" class="main-form_textarea comment"></textarea>
+                    </div>
+                    <div class="main-form_item">
+                        <input type="button" class = 'main-form_button' id="btnsubmit" value="返信">
+                    </div>
+                </section>
             </article>
             <article id = "main-content">
             </article>
             <input type="button" id="btnreload" value="更新">
             <footer>
-                <input type="text" class = "delete_pas">
-                <input type="button" id="btndelete" value="削除">
             </footer>
         </section>
     </body>
