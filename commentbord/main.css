@@ -1,0 +1,25 @@
+@media screen and (max-device-width: 480px)
+{
+    /* 480pxまでの幅の場合に適応される */
+        body 
+        {
+            background-color:rgb(44, 249, 78);
+        }
+    }
+
+@media screen and (min-device-width: 481px) and (max-device-width: 780px)
+{
+    /* 480pxまでの幅の場合に適応される */
+        body 
+        {
+            background-color:#F9DF2C;
+        }
+    }
+
+@media screen and (min-device-width:1200px)
+{
+    body
+    {
+        background-color: blue;
+    }
+}

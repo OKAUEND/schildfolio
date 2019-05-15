@@ -4,13 +4,10 @@ require('DBconnect.php');
 
 header('Content-Type: application/json; charset=UTF-8');
 
-$_REQUEST;
-
 if(empty($_POST))
 {
-    //サーバーエラーとしてフロントにエラー情報を返す
-    header("HTTP/1.1 500 Internal Server Error");
-    die();
+    //値が送られてきていないのでエラーを返す
+    header('');
 }
 
 $thread_id = $_POST['thread_id'];
@@ -18,11 +15,12 @@ $response_no = explode(',',$_POST['data']);
 
 try
 {
-
     $pdo = new DBconnect();
 
-    $table = 'comment';
-    $column = 'delete_flg';
+    $select = 'ID';
+    $from   = 'comment';
+
+    $where = '';
 
     $count = 1;
 
@@ -47,13 +45,17 @@ try
 
     $in = 'ID IN ( '.$in.' )';
 
-    $sql = 'UPDATE '.$table.' SET '.$column.' = true WHERE '.$in;
+    $where = $in.' AND delete_flg = false';
+
+    $sql = 'SELECT '.$select.' FROM '.$from.' WHERE '.$where;
 
     $stmt = $pdo->plural($sql,$data);
+    
+    $result = $stmt->fetchAll();
 
-    echo json_encode(true);
+    echo json_encode($result);
 }
-catch(PDOException $e)
+catch(Exception $e)
 {
     //サーバーエラーとしてフロントにエラー情報を返す
     header("HTTP/1.1 500 Internal Server Error");
